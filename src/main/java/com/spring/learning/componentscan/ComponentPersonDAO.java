@@ -1,9 +1,12 @@
 package com.spring.learning.componentscan;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+/***
+ * Repository used for DAO / Data
+ */
+@Repository
 public class ComponentPersonDAO {
 
     @Autowired

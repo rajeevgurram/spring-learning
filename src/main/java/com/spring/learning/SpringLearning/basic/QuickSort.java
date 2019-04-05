@@ -1,8 +1,8 @@
 package com.spring.learning.SpringLearning.basic;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class QuickSort implements Sort {
     public int sort() {
         return 3;

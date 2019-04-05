@@ -7,14 +7,22 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * Created by rajeevgurram on 9/9/18.
+ * Service is for business logic
  */
-@Component
+@Service
+/***
+ * singleton – Return a single bean instance per Spring IoC container
+ * prototype – Return a new bean instance each time when requested
+ * request – Return a single bean instance per HTTP request. *
+ * session – Return a single bean instance per HTTP session. *
+ * globalSession – Return a single bean instance per global HTTP session. *
+ */
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Searching {
 
@@ -30,12 +38,12 @@ public class Searching {
 
     @PostConstruct
     public void postConstruct() {
-        logger.info("POST CONSTRUCT");
+        System.out.println("POST CONSTRUCT");
     }
 
     @PreDestroy
     public void preDestroy() {
-        logger.info("PRE DESTROY");
+        System.out.println("PRE DESTROY");
     }
 
 

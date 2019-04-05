@@ -1,6 +1,5 @@
 package com.spring.learning.SpringLearning;
 
-import com.spring.learning.SpringLearning.scope.PersonDAO;
 import com.spring.learning.componentscan.ComponentPersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +9,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+/***
+ * we need to use componentscan when depend upon the classes
+ * that are not part of this package.
+ * default it scans this package. otherwise we need to explicitly specify
+ */
 @ComponentScan({
 		"com.spring.learning.componentscan"
 })
