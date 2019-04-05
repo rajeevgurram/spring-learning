@@ -16,7 +16,7 @@ import java.lang.invoke.MethodHandles;
         "com.spring.learning.properties"
 })
 //Loading url.properties
-@PropertySource("url.properties")
+@PropertySource("classpath:url.properties")
 public class SpringLearningPropertiesApplication {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
